@@ -1,0 +1,21 @@
+#info {
+    height: auto;
+    #info-intro {
+        height: 20vh;
+        width: 40vw;
+        margin: auto;
+        border-bottom: 1px solid $neutral-grey;
+    }
+    h1 {
+        padding-top: 10vh;
+    }
+    div {
+        padding: 5vh;
+    }
+}
+
+@media (min-width: $desktop) {
+    #info-grid{
+        display: flex;
+    }
+}

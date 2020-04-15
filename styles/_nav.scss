@@ -1,0 +1,42 @@
+nav {
+    background: $white;
+    height: 15vh;
+    padding: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .nav-links {
+        display: none;
+        color: $primary-violet;
+    }
+}
+
+@media (min-width: $desktop) {
+    nav {
+        height: 10vh;
+        width: 100vw;
+        .nav-links {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 10vh;
+            text-transform: uppercase;
+            li {
+                list-style: none;
+                width: auto;
+                padding: 1em;
+            }
+            a {
+                text-decoration: none;
+                color: black;
+            }
+            button {
+                border-color: black;
+                color: black;
+            }
+        }
+        #svg-hamburger {
+            display: none;
+        }
+    }
+}
