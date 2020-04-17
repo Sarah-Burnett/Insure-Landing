@@ -46,15 +46,21 @@ nav .nav-links {
     color: black;
   }
   nav .nav-links button {
-    border-color: black;
+    padding: 2vh 4vw;
+    border: 2px solid black;
+    background: none;
     color: black;
+    font-size: 16px;
+    font-family: 'Karla', sans-serif;
+    text-transform: uppercase;
+    cursor: pointer;
   }
   nav #svg-hamburger {
     display: none;
   }
 }
 
-#plans, #how-we-work {
+#plans {
   height: 185vh;
   background: #2d2640;
 }
@@ -88,14 +94,14 @@ nav .nav-links {
   padding: 5vh;
 }
 
-#plans-content .svg-plans-left {
+#plans-content .svg-plans-left-mob {
   position: absolute;
   top: 0;
   left: 0;
   z-index: 0;
 }
 
-#plans-content .svg-plans-right {
+#plans-content .svg-plans-right-mob {
   position: absolute;
   bottom: -175px;
   right: 0;
@@ -110,8 +116,19 @@ nav .nav-links {
   padding: 5vh 0;
 }
 
+#plans-content button {
+  padding: 2vh 4vw;
+  border: 2px solid #FFF;
+  background: none;
+  color: #FFF;
+  font-size: 16px;
+  font-family: 'Karla', sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
 @media (min-width: 720px) {
-  #plans, #how-we-work {
+  #plans {
     height: 90vh;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -160,60 +177,15 @@ nav .nav-links {
   }
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-body {
-  font-size: 16px;
-  font-family: 'Karla', sans-serif;
-  line-height: 2em;
-  background: #FFF;
-  text-align: center;
-}
-
-@media (min-width: 720px) {
-  body {
-    text-align: left;
-  }
-}
-
-h1 {
-  font-family: 'DM Serif Display', serif;
-  font-size: xx-large;
-}
-
-h2 {
-  font-family: 'DM Serif Display', serif;
-  font-size: x-large;
-}
-
-section {
-  height: 100vh;
-  width: 100vw;
-}
-
-button {
-  padding: 2vh 4vw;
-  border: 2px solid #FFF;
-  background: none;
-  color: #FFF;
-  font-size: 16px;
-  font-family: 'Karla', sans-serif;
-  text-transform: uppercase;
-}
-
 #how-we-work {
   position: relative;
+  background: #2d2640;
   height: 317px;
   margin: 5vh 5vw;
   width: 90vw;
 }
 
-#how-we-work .svg-how-we-work {
+#how-we-work .svg-how-we-work-mob {
   position: absolute;
   top: 0;
   right: 0;
@@ -226,6 +198,17 @@ button {
 
 #how-we-work p {
   padding: 5vh;
+}
+
+#how-we-work button {
+  padding: 2vh 4vw;
+  border: 2px solid #FFF;
+  background: none;
+  color: #FFF;
+  font-size: 16px;
+  font-family: 'Karla', sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
 footer {
@@ -288,5 +271,41 @@ footer #footer-links h3 {
 footer #footer-links ul li {
   color: #2b272f;
   list-style: none;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: 'Karla', sans-serif;
+  line-height: 2em;
+  background: #FFF;
+  text-align: center;
+}
+
+@media (min-width: 720px) {
+  body {
+    text-align: left;
+  }
+}
+
+h1 {
+  font-family: 'DM Serif Display', serif;
+  font-size: xx-large;
+}
+
+h2 {
+  font-family: 'DM Serif Display', serif;
+  font-size: x-large;
+}
+
+section {
+  height: 100vh;
+  width: 100vw;
 }
 /*# sourceMappingURL=index.css.map */

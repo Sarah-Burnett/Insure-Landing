@@ -6,10 +6,24 @@ $neutral-ltgrey: hsl(0, 0%, 98%);
 $white: #FFF;
 $font-size: 16px;
 $desktop: 720px;
+$width: 85vw;
+
+@mixin button($color) {
+    padding: 2vh 4vw;
+    border: 2px solid $color;
+    background: none;
+    color: $color;
+    font-size: $font-size;
+    font-family: 'Karla', sans-serif;
+    text-transform: uppercase;
+    cursor: pointer;
+}
 
 @import 'nav';
 @import 'plans';
 @import 'info';
+@import 'howwework';
+@import 'footer';
 
 * {
     margin: 0;
@@ -38,85 +52,19 @@ h2 {
     font-size: x-large;
 }
 
-section {
-    height: 100vh;
-    width: 100vw;
+// svg
+.svg-mobile {
+    display: block;
+}
+.svg-desktop {
+    display: none;
 }
 
-button {
-    padding: 2vh 4vw;
-    border: 2px solid $white;
-    background: none;
-    color: $white;
-    font-size: $font-size;
-    font-family: 'Karla', sans-serif;
-    text-transform: uppercase;
-}
-
-
-
-#how-we-work {
-    @extend #plans;
-    position: relative;
-    height: 317px;
-    margin: 5vh 5vw;
-    width: 90vw;
-    .svg-how-we-work {
-        position: absolute;
-        top: 0;
-        right: 0;
-        z-index: 0;
+@media (min-width: $desktop){
+    .svg-mobile {
+        display: none;
     }
-    h1 {
-        padding: 5vh;
-    }
-    p {
-        padding: 5vh;
-    }
-}
-
-footer {
-    background: $neutral-ltgrey; 
-    position: relative;
-    #footer-contact {
-        height: 200px;
-        width: 75vw;
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        border-bottom: 1px solid $neutral-grey;
-        padding: 5vh;
-        .svg-footer {
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 0;
-        }
-        #svg-logo {
-            z-index: 1;
-        }
-        #social-icons {
-            z-index: 1;
-            svg {
-                margin: 0 2vw;
-            }
-        }
-    }
-    #footer-links {
-        padding: 5vh;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        font-weight: bold;
-        font-size: smaller;
-        h3 {
-            color: $neutral-grey;
-            padding: 3vh;
-        }       
-        ul li {
-            color: $neutral-violet;
-            list-style: none;
-        }
+    .svg-desktop {
+        display: block;
     }
 }

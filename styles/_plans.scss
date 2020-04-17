@@ -15,23 +15,23 @@
 #plans-content {
     position: relative;
     height: 100vh;
-    .svg-plans-left {
+    .svg-plans-left-mob {
        position: absolute;
        top: 0;
        left: 0;
        z-index: 0;
     }
-    .svg-plans-right {
+    .svg-plans-right-mob {
         position: absolute;
         bottom: -175px;
         right: 0;
         z-index: 0;
     }
-    h1 {
-        z-index: 1;
-    }
     p {
         padding: 5vh 0;
+    }
+    button {
+        @include button($white);
     }
     color: $white;
     display: flex;
@@ -42,19 +42,38 @@
 }
 
 @media (min-width: $desktop) {
-    #plans {
-        height: 90vh;
-        display: flex;
-        flex-direction: reverse-row;
+    #intro {
+        position: relative;
+        background: $primary-violet;
+        #plans {
+            height: 100vh;
+            width: $width;
+            margin: auto;
+            display: flex;
+            flex-direction: row-reverse;
+            #img-intro {
+                position: relative;
+                top: 20vh;
+                width: 50vw;
+                height: 100vh;
+                background-image: url("/images/image-intro-desktop.jpg");
+                background-position: top;
+            }
+            #plans-content{
+                width: 50vw;
+                height: 90vh;
+            }
+        }
+        .svg-plans-left-desktop {
+            position: absolute;
+            bottom: -250px;
+            left: 0;
+        }
+        .svg-plans-right-desktop {
+            position: absolute;
+            top: -20vh;
+            right: -10vh;
+            z-index: 0;
+        }
     }
-   #intro-img {
-       width: 40vw;
-       height: 80vh;
-        background-image: url("/images/image-intro-desktop.jpg");
-        background-position: center;
-   }
-   #plans-content{
-       width: 60vw;
-       height: 90vh;
-   }
 }

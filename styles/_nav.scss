@@ -13,6 +13,8 @@ nav {
 
 @media (min-width: $desktop) {
     nav {
+        position: relative;
+        z-index: 1;
         height: 10vh;
         width: 100vw;
         .nav-links {
@@ -31,8 +33,7 @@ nav {
                 color: black;
             }
             button {
-                border-color: black;
-                color: black;
+                @include button(black);
             }
         }
         #svg-hamburger {
