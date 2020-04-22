@@ -1,14 +1,49 @@
 nav {
+  position: relative;
+  z-index: 1;
+  opacity: 1;
   background: #FFF;
   height: 15vh;
   padding: 5vw;
+  margin: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 nav .nav-links {
-  display: none;
-  color: #2d2640;
+  position: absolute;
+  z-index: 0;
+  top: 15vh;
+  left: 100vw;
+  width: 100vw;
+  height: 100vh;
+  color: white;
+  border-bottom: 2px solid #837d87;
+  background: #2d2640 url("/bg-pattern-mobile-nav.6952305e.svg") no-repeat scroll left bottom;
+  transition: transform 1s ease-in;
+}
+nav .nav-links li {
+  list-style: none;
+  width: auto;
+  padding: 1em 0.5em;
+}
+nav .nav-links a {
+  text-decoration: none;
+  color: white;
+}
+nav .nav-links button {
+  padding: 2vh 4vw;
+  border: 2px solid white;
+  background: none;
+  color: white;
+  font-size: 16px;
+  font-family: "Karla", sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.nav-active {
+  transform: translateX(-100vw);
 }
 
 @media (min-width: 720px) {
@@ -19,15 +54,16 @@ nav .nav-links {
     width: 100vw;
   }
   nav .nav-links {
+    position: static;
+    height: 10vh;
+    width: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 10vh;
     text-transform: uppercase;
+    background: #FFF;
   }
   nav .nav-links li {
-    list-style: none;
-    width: auto;
     padding: 1em;
   }
   nav .nav-links a {
@@ -307,6 +343,7 @@ body {
   line-height: 2em;
   background: #FFF;
   text-align: center;
+  overflow-x: hidden;
 }
 @media (min-width: 720px) {
   body {
