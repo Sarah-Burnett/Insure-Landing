@@ -437,6 +437,7 @@ body {
   line-height: 2em;
   background: #FFF;
   text-align: center;
+  width: 100vw;
   overflow-x: hidden;
 }
 
