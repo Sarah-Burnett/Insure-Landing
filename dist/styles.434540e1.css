@@ -1,12 +1,10 @@
 nav {
-  position: relative;
-  z-index: 1;
-  opacity: 1;
+  position: fixed;
+  z-index: 5;
   background: #FFF;
-  height: 15vh;
+  height: 10vh;
   width: 100vw;
   padding: 5vw;
-  margin: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -14,9 +12,6 @@ nav {
 @media (min-width: 720px) {
   nav {
     position: relative;
-    z-index: 1;
-    height: 10vh;
-    width: 100vw;
   }
   nav #svg-hamburger {
     display: none;
@@ -24,21 +19,20 @@ nav {
 }
 
 .nav-links {
-  position: absolute;
+  position: fixed;
   z-index: 0;
-  top: 15vh;
+  top: 10vh;
   left: 100vw;
   width: 100vw;
-  height: 100vh;
+  height: 90vh;
   color: white;
-  border-bottom: 2px solid #837d87;
   background: #2d2640 url("/bg-pattern-mobile-nav.6952305e.svg") no-repeat scroll left bottom;
   transition: transform 1s ease-in;
 }
 .nav-links li {
   list-style: none;
   width: auto;
-  padding: 1em 0.5em;
+  padding: 0.9em;
 }
 .nav-links a {
   text-decoration: none;
@@ -62,7 +56,7 @@ nav {
 @media (min-width: 720px) {
   .nav-links {
     position: static;
-    height: 10vh;
+    height: 100%;
     width: auto;
     display: flex;
     align-items: center;
@@ -89,7 +83,7 @@ nav {
   }
 }
 #plans {
-  height: 185vh;
+  height: 200vh;
   width: 100vw;
   background: #2d2640;
 }
@@ -99,7 +93,7 @@ nav {
   background-position: left;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 85vh;
+  height: 100vh;
   background-color: #95a9c6;
 }
 
@@ -145,7 +139,7 @@ nav {
     background: #2d2640;
   }
   #intro #plans {
-    height: 100vh;
+    height: 90vh;
     width: 85vw;
     margin: auto;
     display: flex;
@@ -155,7 +149,7 @@ nav {
     position: relative;
     top: 20vh;
     width: 50vw;
-    height: 100vh;
+    height: 90vh;
     background-image: url("/image-intro-desktop.2adb86e5.jpg");
     background-position: top;
   }

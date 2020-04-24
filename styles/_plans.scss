@@ -1,5 +1,5 @@
 #plans {
-    height: 185vh;
+    height: 200vh;
     width: 100vw;
     background: $primary-violet;
 }
@@ -9,7 +9,7 @@
     background-position: left; 
     background-repeat: no-repeat;
     background-size: cover;
-    height: 85vh;
+    height: 100vh;
     background-color: $primary-blue;
 }
 
@@ -47,7 +47,7 @@
         position: relative;
         background: $primary-violet;
         #plans {
-            height: 100vh;
+            height: 90vh;
             width: $width;
             margin: auto;
             display: flex;
@@ -56,7 +56,7 @@
                 position: relative;
                 top: 20vh;
                 width: 50vw;
-                height: 100vh;
+                height: 90vh;
                 background-image: url("/images/image-intro-desktop.jpg");
                 background-position: top;
             }
