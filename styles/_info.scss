@@ -3,6 +3,14 @@
     width: $width;
     margin: auto;
     #info-intro{
+        @include mediaQ($desktop){
+            &::before {
+                content: '';
+                display: block;
+                height: 20vh;
+                width: $width;
+            }
+        }
         h1 {
             padding-bottom: 10vh;
             &::before {
@@ -13,32 +21,21 @@
                 margin: 10vh auto auto auto;
                 border-top: 1px solid $neutral-grey;
             }
+            @include mediaQ($desktop){
+                text-align: center;
+            }
         }
     } 
     #info-grid{
         div {
             padding: 2.5vh 0 2.5vh 0;
         }
+        @include mediaQ($desktop){
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: min-content;
+            grid-gap: 2vw;
+            justify-content: center;
+        }
     }  
-}
-
-@media (min-width: $desktop) {
-    #info-intro {
-        &::before {
-            content: '';
-            display: block;
-            height: 20vh;
-            width: $width;
-        }
-        h1 {
-            text-align: center;
-        }
-    }
-    #info-grid{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: min-content;
-        grid-gap: 2vw;
-        justify-content: center;
-    }
 }

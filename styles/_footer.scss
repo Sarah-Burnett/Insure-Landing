@@ -1,4 +1,5 @@
 footer {
+    width: 100vw;
     background: $neutral-ltgrey; 
     position: relative;
     .svg-footer-mob {
@@ -6,6 +7,14 @@ footer {
         top: 0;
         left: 0;
         z-index: 0;
+        }
+    @include mediaQ($desktop){
+        .svg-footer-desktop {
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+        }
     }
     #footer-contact {
         height: 173px;
@@ -25,6 +34,12 @@ footer {
                 margin: 0 2px;
             }
         }
+        @include mediaQ($desktop){
+            padding: 5vh 0;
+            height: auto;
+            flex-direction: row;
+            justify-content: space-between;
+        }
     }
     #footer-links {
         width: $width;
@@ -41,24 +56,7 @@ footer {
             color: $neutral-violet;
             list-style: none;
         }
-    }
-}
-
-@media (min-width: $desktop) {
-    footer {
-        .svg-footer-desktop {
-            position: absolute;
-            top: 0;
-            left: 0;
-            z-index: 0;
-        }
-        #footer-contact {
-            padding: 5vh 0;
-            height: auto;
-            flex-direction: row;
-            justify-content: space-between;
-        }
-        #footer-links {
+        @include mediaQ($desktop){
             position: relative;
             z-index: 1;
             display: grid;

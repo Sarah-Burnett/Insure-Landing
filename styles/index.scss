@@ -5,8 +5,9 @@ $neutral-grey: hsl(273, 4%, 51%);
 $neutral-ltgrey: hsl(0, 0%, 98%);
 $white: #FFF;
 $font-size: 16px;
-$desktop: 720px;
 $width: 85vw;
+
+$desktop: 720px;
 
 @mixin button($color) {
     padding: 2vh 4vw;
@@ -17,6 +18,12 @@ $width: 85vw;
     font-family: 'Karla', sans-serif;
     text-transform: uppercase;
     cursor: pointer;
+}
+
+@mixin mediaQ($px) {
+    @media (min-width: $px){
+        @content;
+    }
 }
 
 @import 'nav';
@@ -57,16 +64,13 @@ h2 {
 // svg
 .svg-mobile {
     display: block;
+    @include mediaQ($desktop){
+        display: none;
+    }
 }
 .svg-desktop {
     display: none;
-}
-
-@media (min-width: $desktop){
-    .svg-mobile {
-        display: none;
-    }
-    .svg-desktop {
+    @include mediaQ($desktop){
         display: block;
     }
 }

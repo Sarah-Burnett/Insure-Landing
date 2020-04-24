@@ -4,34 +4,45 @@ nav {
     opacity: 1;
     background: $white;
     height: 15vh;
+    width: 100vw;
     padding: 5vw;
     margin: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    .nav-links {
-        position: absolute;
-        z-index: 0;
-        top: 15vh;
-        left: 100vw;
+    @include mediaQ($desktop){
+        position: relative;
+        z-index: 1;
+        height: 10vh;
         width: 100vw;
-        height: 100vh;
+        #svg-hamburger {
+            display: none;
+        }
+    }
+}
+
+.nav-links {
+    position: absolute;
+    z-index: 0;
+    top: 15vh;
+    left: 100vw;
+    width: 100vw;
+    height: 100vh;
+    color: white;
+    border-bottom: 2px solid hsl(273, 4%, 51%);
+    background: $primary-violet url('../images/bg-pattern-mobile-nav.svg') no-repeat scroll left bottom;
+    transition: transform 1s ease-in;
+    li {
+        list-style: none;
+        width: auto;
+        padding: 1em .5em;
+    }
+    a {
+        text-decoration: none;
         color: white;
-        border-bottom: 2px solid hsl(273, 4%, 51%);
-        background: $primary-violet url('../images/bg-pattern-mobile-nav.svg') no-repeat scroll left bottom;
-        transition: transform 1s ease-in;
-        li {
-            list-style: none;
-            width: auto;
-            padding: 1em .5em;
-        }
-        a {
-            text-decoration: none;
-            color: white;
-        }
-        button {
-            @include button(white);
-        }
+    }
+    button {
+        @include button(white);
     }
 }
 
@@ -39,34 +50,25 @@ nav {
     transform: translateX(-100vw);
 }
 
-@media (min-width: $desktop) {
-    nav {
-        position: relative;
-        z-index: 1;
+@include mediaQ($desktop){
+    .nav-links{
+        position: static;
         height: 10vh;
-        width: 100vw;
-        .nav-links {
-            position: static;
-            height: 10vh;
-            width: auto;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-transform: uppercase;
-            background: $white;
-            li {
-                padding: 1em;
-            }
-            a {
-                text-decoration: none;
-                color: black;
-            }
-            button {
-                @include button(black);
-            }
+        width: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+        background: $white;
+        li {
+            padding: 1em;
         }
-        #svg-hamburger {
-            display: none;
+        a {
+            text-decoration: none;
+            color: black;
+        }
+        button {
+            @include button(black);
         }
     }
 }

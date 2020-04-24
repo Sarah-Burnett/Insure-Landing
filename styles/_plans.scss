@@ -1,5 +1,6 @@
 #plans {
     height: 185vh;
+    width: 100vw;
     background: $primary-violet;
 }
 
@@ -41,7 +42,7 @@
     padding: 5vh;
 }
 
-@media (min-width: $desktop) {
+@include mediaQ($desktop) {
     #intro {
         position: relative;
         background: $primary-violet;
