@@ -38,6 +38,11 @@ $desktop: 720px;
     box-sizing: border-box;
 }
 
+html {
+    width: 100vw;
+    overflow-x: hidden;
+}
+
 body {
     font-size: $font-size;
     font-family: 'Karla', sans-serif;
