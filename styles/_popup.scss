@@ -1,0 +1,58 @@
+.popupBox {
+    position: fixed;
+    top: 80px;
+    min-height: 100vh;
+    width: 100vw;
+    color: $white;
+    background: $neutral-violet;
+    box-shadow: 0px 0px 5px -1px $neutral-grey;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1s ease-in;
+    z-index: 100;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: "close" "content";
+    align-items: center;
+}
+
+.popupClose{
+    text-align: right;
+    width: 100%;
+    grid-area: close;
+}
+#popupClose {
+    cursor: pointer;
+    padding: 1vw;
+}
+
+.popupText {
+    grid-area: content;
+    width: 95vw;
+    h1, p{
+        padding: 2vh 2vw;
+    }
+    a {
+        color: $white;
+    }
+}
+
+.popup-active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+@include media($desktop){
+    .popupBox {
+        min-height: 50vh;
+        width: 80vw;
+        top: 25vh;
+        left: 10vw;
+        border: 2px solid $neutral-ltgrey;
+    }
+    .popupClose, .popupText{
+        width: 80vw;
+        height: auto;
+    }
+}

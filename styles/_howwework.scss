@@ -16,7 +16,7 @@
         right: 0;
         z-index: 0;
     }
-    @include mediaQ($desktop){
+    @include media($desktop){
         height: 250px;
         flex-direction: row;
         padding: 0 5vw 0 5vw;
@@ -36,8 +36,8 @@
         padding: 5vh;
     }
     button {
-        @include button($white);
-        @include mediaQ($desktop){
+        @include button($white, $primary-violet);
+        @include media($desktop){
             position: relative;
             z-index: 1;
             width: max-content;

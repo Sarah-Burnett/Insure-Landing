@@ -3,7 +3,7 @@
     width: $width;
     margin: auto;
     #info-intro{
-        @include mediaQ($desktop){
+        @include media($desktop){
             &::before {
                 content: '';
                 display: block;
@@ -21,7 +21,7 @@
                 margin: 10vh auto auto auto;
                 border-top: 1px solid $neutral-grey;
             }
-            @include mediaQ($desktop){
+            @include media($desktop){
                 text-align: center;
             }
         }
@@ -30,7 +30,7 @@
         div {
             padding: 2.5vh 0 2.5vh 0;
         }
-        @include mediaQ($desktop){
+        @include media($desktop){
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             grid-template-rows: min-content;

@@ -8,7 +8,7 @@ footer {
         left: 0;
         z-index: 0;
         }
-    @include mediaQ($desktop){
+    @include media($desktop){
         .svg-footer-desktop {
             position: absolute;
             top: 0;
@@ -34,7 +34,7 @@ footer {
                 margin: 0 2px;
             }
         }
-        @include mediaQ($desktop){
+        @include media($desktop){
             padding: 5vh 0;
             height: auto;
             flex-direction: row;
@@ -56,11 +56,11 @@ footer {
             color: $neutral-violet;
             list-style: none;
         }
-        @include mediaQ($desktop){
+        @include media($desktop){
             position: relative;
             z-index: 1;
             display: grid;
-            grid-template-columns: repeat(4, 1fr);
+            grid-template-columns: repeat(5, 1fr);
             grid-column-gap: 2vw;
         }
     }

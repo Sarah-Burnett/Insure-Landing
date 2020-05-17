@@ -7,26 +7,28 @@ $white: #FFF;
 $font-size: 16px;
 $width: 85vw;
 
-$desktop: 720px;
+$desktop: 800px;
 
-@mixin button($color) {
+@mixin button($color, $bgColor) {
     padding: 2vh 4vw;
     border: 2px solid $color;
-    background: none;
+    background: $bgColor;
     color: $color;
     font-size: $font-size;
     font-family: 'Karla', sans-serif;
     text-transform: uppercase;
+    box-shadow: 0px 0px 5px -1px $neutral-grey;
     cursor: pointer;
 }
 
-@mixin mediaQ($px) {
+@mixin media($px) {
     @media (min-width: $px){
         @content;
     }
 }
 
 @import 'nav';
+@import 'popup';
 @import 'plans';
 @import 'info';
 @import 'howwework';
@@ -54,6 +56,10 @@ body {
     }
     width: 100vw;
     overflow-x: hidden;
+    &::selection {
+        color: $primary-blue;
+        background: $white;
+    }
 }
 
 h1 {
@@ -69,13 +75,13 @@ h2 {
 // svg
 .svg-mobile {
     display: block;
-    @include mediaQ($desktop){
+    @include media($desktop){
         display: none;
     }
 }
 .svg-desktop {
     display: none;
-    @include mediaQ($desktop){
+    @include media($desktop){
         display: block;
     }
 }

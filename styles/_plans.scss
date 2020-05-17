@@ -32,17 +32,17 @@
         padding: 5vh 0;
     }
     button {
-        @include button($white);
+        @include button($white, $primary-violet);
     }
     color: $white;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 5vh;
+    padding: 2vh;
 }
 
-@include mediaQ($desktop) {
+@include media($desktop) {
     #intro {
         position: relative;
         background: $primary-violet;
@@ -57,8 +57,8 @@
                 top: 20vh;
                 width: 50vw;
                 height: 90vh;
-                background-image: url("/images/image-intro-desktop.jpg");
                 background-position: top;
+                background-image: url("/images/image-intro-desktop.jpg");
             }
             #plans-content{
                 width: 50vw;

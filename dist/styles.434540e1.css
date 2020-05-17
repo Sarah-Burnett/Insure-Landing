@@ -2,14 +2,14 @@ nav {
   position: fixed;
   z-index: 5;
   background: #FFF;
-  height: 10vh;
+  height: 80px;
   width: 100vw;
   padding: 5vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-@media (min-width: 720px) {
+@media (min-width: 800px) {
   nav {
     position: relative;
   }
@@ -20,11 +20,12 @@ nav {
 
 .nav-links {
   position: fixed;
-  z-index: 0;
-  top: 10vh;
+  z-index: 101;
+  top: 80px;
   left: 100vw;
   width: 100vw;
   height: 90vh;
+  padding: 3vh;
   color: white;
   background: #2d2640 url("/bg-pattern-mobile-nav.6952305e.svg") no-repeat scroll left bottom;
   transition: transform 1s ease-in;
@@ -32,7 +33,8 @@ nav {
 .nav-links li {
   list-style: none;
   width: auto;
-  padding: 0.9em;
+  padding: 3vh;
+  text-transform: uppercase;
 }
 .nav-links a {
   text-decoration: none;
@@ -41,11 +43,12 @@ nav {
 .nav-links button {
   padding: 2vh 4vw;
   border: 2px solid white;
-  background: none;
+  background: #2d2640;
   color: white;
   font-size: 16px;
   font-family: "Karla", sans-serif;
   text-transform: uppercase;
+  box-shadow: 0px 0px 5px -1px #837d87;
   cursor: pointer;
 }
 
@@ -53,15 +56,16 @@ nav {
   transform: translateX(-100vw);
 }
 
-@media (min-width: 720px) {
+@media (min-width: 800px) {
   .nav-links {
     position: static;
+    top: 0;
+    left: 0;
     height: 100%;
     width: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-transform: uppercase;
     background: #FFF;
   }
   .nav-links li {
@@ -79,7 +83,68 @@ nav {
     font-size: 16px;
     font-family: "Karla", sans-serif;
     text-transform: uppercase;
+    box-shadow: 0px 0px 5px -1px #837d87;
     cursor: pointer;
+  }
+}
+.popupBox {
+  position: fixed;
+  top: 80px;
+  min-height: 100vh;
+  width: 100vw;
+  color: #FFF;
+  background: #2b272f;
+  box-shadow: 0px 0px 5px -1px #837d87;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s ease-in;
+  z-index: 100;
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto 1fr;
+  grid-template-areas: "close" "content";
+  align-items: center;
+}
+
+.popupClose {
+  text-align: right;
+  width: 100%;
+  grid-area: close;
+}
+
+#popupClose {
+  cursor: pointer;
+  padding: 1vw;
+}
+
+.popupText {
+  grid-area: content;
+  width: 95vw;
+}
+.popupText h1, .popupText p {
+  padding: 2vh 2vw;
+}
+.popupText a {
+  color: #FFF;
+}
+
+.popup-active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+@media (min-width: 800px) {
+  .popupBox {
+    min-height: 50vh;
+    width: 80vw;
+    top: 25vh;
+    left: 10vw;
+    border: 2px solid #fafafa;
+  }
+
+  .popupClose, .popupText {
+    width: 80vw;
+    height: auto;
   }
 }
 #plans {
@@ -105,7 +170,7 @@ nav {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 5vh;
+  padding: 2vh;
 }
 #plans-content .svg-plans-left-mob {
   position: absolute;
@@ -125,15 +190,16 @@ nav {
 #plans-content button {
   padding: 2vh 4vw;
   border: 2px solid #FFF;
-  background: none;
+  background: #2d2640;
   color: #FFF;
   font-size: 16px;
   font-family: "Karla", sans-serif;
   text-transform: uppercase;
+  box-shadow: 0px 0px 5px -1px #837d87;
   cursor: pointer;
 }
 
-@media (min-width: 720px) {
+@media (min-width: 800px) {
   #intro {
     position: relative;
     background: #2d2640;
@@ -150,8 +216,8 @@ nav {
     top: 20vh;
     width: 50vw;
     height: 90vh;
-    background-image: url("/image-intro-desktop.2adb86e5.jpg");
     background-position: top;
+    background-image: url("/image-intro-desktop.2adb86e5.jpg");
   }
   #intro #plans #plans-content {
     width: 50vw;
@@ -174,7 +240,7 @@ nav {
   width: 85vw;
   margin: auto;
 }
-@media (min-width: 720px) {
+@media (min-width: 800px) {
   #info #info-intro::before {
     content: "";
     display: block;
@@ -193,7 +259,7 @@ nav {
   margin: 10vh auto auto auto;
   border-top: 1px solid #837d87;
 }
-@media (min-width: 720px) {
+@media (min-width: 800px) {
   #info #info-intro h1 {
     text-align: center;
   }
@@ -201,7 +267,7 @@ nav {
 #info #info-grid div {
   padding: 2.5vh 0 2.5vh 0;
 }
-@media (min-width: 720px) {
+@media (min-width: 800px) {
   #info #info-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -230,7 +296,7 @@ nav {
   right: 0;
   z-index: 0;
 }
-@media (min-width: 720px) {
+@media (min-width: 800px) {
   #how-we-work {
     height: 250px;
     flex-direction: row;
@@ -254,14 +320,15 @@ nav {
 #how-we-work button {
   padding: 2vh 4vw;
   border: 2px solid #FFF;
-  background: none;
+  background: #2d2640;
   color: #FFF;
   font-size: 16px;
   font-family: "Karla", sans-serif;
   text-transform: uppercase;
+  box-shadow: 0px 0px 5px -1px #837d87;
   cursor: pointer;
 }
-@media (min-width: 720px) {
+@media (min-width: 800px) {
   #how-we-work button {
     position: relative;
     z-index: 1;
@@ -280,7 +347,7 @@ footer .svg-footer-mob {
   left: 0;
   z-index: 0;
 }
-@media (min-width: 720px) {
+@media (min-width: 800px) {
   footer .svg-footer-desktop {
     position: absolute;
     top: 0;
@@ -307,7 +374,7 @@ footer #footer-contact #social-icons {
 footer #footer-contact #social-icons svg {
   margin: 0 2px;
 }
-@media (min-width: 720px) {
+@media (min-width: 800px) {
   footer #footer-contact {
     padding: 5vh 0;
     height: auto;
@@ -331,12 +398,12 @@ footer #footer-links ul li {
   color: #2b272f;
   list-style: none;
 }
-@media (min-width: 720px) {
+@media (min-width: 800px) {
   footer #footer-links {
     position: relative;
     z-index: 1;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-column-gap: 2vw;
   }
 }
@@ -361,10 +428,14 @@ body {
   width: 100vw;
   overflow-x: hidden;
 }
-@media (min-width: 720px) {
+@media (min-width: 800px) {
   body {
     text-align: left;
   }
+}
+body::selection {
+  color: #95a9c6;
+  background: #FFF;
 }
 
 h1 {
@@ -380,7 +451,7 @@ h2 {
 .svg-mobile {
   display: block;
 }
-@media (min-width: 720px) {
+@media (min-width: 800px) {
   .svg-mobile {
     display: none;
   }
@@ -389,7 +460,7 @@ h2 {
 .svg-desktop {
   display: none;
 }
-@media (min-width: 720px) {
+@media (min-width: 800px) {
   .svg-desktop {
     display: block;
   }
