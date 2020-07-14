@@ -488,7 +488,7 @@ footer #footer-contact #social-icons {
 }
 
 footer #footer-contact #social-icons svg {
-  margin: 0 2px;
+  margin: 0 .5vw;
 }
 
 @media (min-width: 800px) {
@@ -508,6 +508,7 @@ footer #footer-contact #social-icons svg {
 footer #footer-links {
   width: 85vw;
   margin: auto;
+  margin-bottom: 2vh;
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: bold;
@@ -530,8 +531,8 @@ footer #footer-links ul li {
     z-index: 1;
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[5];
-        grid-template-columns: repeat(5, 1fr);
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
     grid-column-gap: 2vw;
   }
 }
@@ -602,5 +603,10 @@ h2 {
   .svg-desktop {
     display: block;
   }
+}
+
+a:hover, button:hover {
+  cursor: pointer;
+  opacity: 0.7;
 }
 /*# sourceMappingURL=index.css.map */

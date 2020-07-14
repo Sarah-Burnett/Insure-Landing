@@ -26,9 +26,10 @@ nav {
     width: 100vw;
     height: 90vh;
     padding: 3vh;
-    color: white;
+    color: $white;
     background: $primary-violet url('../images/bg-pattern-mobile-nav.svg') no-repeat scroll left bottom;
     transition: transform 1s ease-in;
+    letter-spacing: 2px;
     li {
         list-style: none;
         width: auto;
@@ -38,6 +39,7 @@ nav {
     a {
         text-decoration: none;
         color: white;
+        @include hoverColor($primary-blue)
     }
     button {
         @include button(white, $primary-violet);
@@ -64,10 +66,11 @@ nav {
         }
         a {
             text-decoration: none;
-            color: black;
+            color: $neutral-grey;
+            @include hoverColor($neutral-violet)
         }
         button {
-            @include button(black, none);
+            @include button($neutral-violet, $white);
         }
     }
 }

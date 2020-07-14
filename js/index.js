@@ -1,3 +1,4 @@
+// toggle mob nav bar
 {
     const navLinks =  document.querySelector('.nav-links');
     const toggleNav = () => navLinks.classList.toggle('nav-active');
@@ -5,6 +6,7 @@
     document.querySelector('#svg-hamburger').addEventListener('click', toggleNav);
     window.addEventListener('resize', hideNav);
 }
+// toggle emergency pop up
 {
     const openPopup = () => {
         const popup = sessionStorage.getItem('popup');
@@ -18,6 +20,7 @@
     openPopup()
 
 }
+// text for emergency pop up
 {
     const setAlertText = "<h1><i class='fa fa-exclamation-circle'></i> Covid-19 update</h1><p>Visit our <a href='#'>Coronavirus help and support</a> page for frequently asked questions about COVID-19 - we want to help you. </p><p>If you’re driving less, you may be able to temporarily lower your mileage and could be entitled to a refund. Find out more on our <a href='#'>lockdown car insurance refund</a> page.</p>"
     document.querySelector('.popupText').innerHTML = setAlertText;

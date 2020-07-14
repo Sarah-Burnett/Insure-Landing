@@ -31,7 +31,13 @@ footer {
         #social-icons {
             z-index: 1;
             svg {
-                margin: 0 2px;
+                margin: 0 .5vw;
+                &:hover {
+                   path {
+                       fill: $neutral-violet;
+                   } 
+                }
+                @include hoverColor($neutral-violet);
             }
         }
         @include media($desktop){
@@ -44,24 +50,33 @@ footer {
     #footer-links {
         width: $width;
         margin: auto;
+        margin-bottom: 2vh;
         text-transform: uppercase;
         letter-spacing: 1px;
         font-weight: bold;
         font-size: smaller;
         h3 {
             color: $neutral-grey;
-            padding: 3vh 0;
+            padding: 3vh 0 1vh;
         }       
         ul li {
             color: $neutral-violet;
             list-style: none;
+            @include hoverUnderline;
+            line-height: 3em;
         }
-        @include media($desktop){
+        @include media($tablet){
             position: relative;
             z-index: 1;
             display: grid;
-            grid-template-columns: repeat(5, 1fr);
-            grid-column-gap: 2vw;
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 2vw;
+        }
+        @include media($desktop){
+            grid-template-columns: repeat(4, 1fr);
+            ul li {
+                line-height: 2.5em;
+            }
         }
     }
 }

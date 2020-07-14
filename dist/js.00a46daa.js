@@ -117,79 +117,43 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"node_modules/parcel/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
+})({"js/index.js":[function(require,module,exports) {
+// toggle mob nav bar
+{
+  var navLinks = document.querySelector('.nav-links');
 
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
-  }
-
-  return bundleURL;
-}
-
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
-
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
-
-  return '/';
-}
-
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)\/[^/]+$/, '$1') + '/';
-}
-
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"node_modules/parcel/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
-
-function updateLink(link) {
-  var newLink = link.cloneNode();
-
-  newLink.onload = function () {
-    link.remove();
+  var toggleNav = function toggleNav() {
+    return navLinks.classList.toggle('nav-active');
   };
 
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
+  var hideNav = function hideNav() {
+    if (navLinks.classList.contains('nav-active')) navLinks.classList.remove('nav-active');
+  };
+
+  document.querySelector('#svg-hamburger').addEventListener('click', toggleNav);
+  window.addEventListener('resize', hideNav);
+} // toggle emergency pop up
+
+{
+  var openPopup = function openPopup() {
+    var popup = sessionStorage.getItem('popup');
+    if (popup === null) document.querySelector('.popupBox').classList.add('popup-active');
+  };
+
+  var closePopup = function closePopup() {
+    document.querySelector('.popupBox').classList.remove('popup-active');
+    sessionStorage.setItem('popup', 'hide');
+  };
+
+  document.querySelector('#popupClose').addEventListener('click', closePopup);
+  openPopup();
+} // text for emergency pop up
+
+{
+  var setAlertText = "<h1><i class='fa fa-exclamation-circle'></i> Covid-19 update</h1><p>Visit our <a href='#'>Coronavirus help and support</a> page for frequently asked questions about COVID-19 - we want to help you. </p><p>If you’re driving less, you may be able to temporarily lower your mileage and could be entitled to a refund. Find out more on our <a href='#'>lockdown car insurance refund</a> page.</p>";
+  document.querySelector('.popupText').innerHTML = setAlertText;
 }
-
-var cssTimeout = null;
-
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
-  }
-
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
-      }
-    }
-
-    cssTimeout = null;
-  }, 50);
-}
-
-module.exports = reloadCSS;
-},{"./bundle-url":"node_modules/parcel/src/builtins/bundle-url.js"}],"styles/index.scss":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"./..\\images\\bg-pattern-mobile-nav.svg":[["bg-pattern-mobile-nav.6952305e.svg","images/bg-pattern-mobile-nav.svg"],"images/bg-pattern-mobile-nav.svg"],"C:\\Users\\becky\\Desktop\\insure-landing\\images\\image-intro-mobile.jpg":[["image-intro-mobile.6d8a140c.jpg","images/image-intro-mobile.jpg"],"images/image-intro-mobile.jpg"],"C:\\Users\\becky\\Desktop\\insure-landing\\images\\image-intro-desktop.jpg":[["image-intro-desktop.2adb86e5.jpg","images/image-intro-desktop.jpg"],"images/image-intro-desktop.jpg"],"_css_loader":"node_modules/parcel/src/builtins/css-loader.js"}],"node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{}],"node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -393,5 +357,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["node_modules/parcel/src/builtins/hmr-runtime.js"], null)
-//# sourceMappingURL=/styles.434540e1.js.map
+},{}]},{},["node_modules/parcel/src/builtins/hmr-runtime.js","js/index.js"], null)
+//# sourceMappingURL=/js.00a46daa.js.map

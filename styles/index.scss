@@ -4,10 +4,12 @@ $neutral-violet: hsl(270, 9%, 17%);
 $neutral-grey: hsl(273, 4%, 51%);
 $neutral-ltgrey: hsl(0, 0%, 98%);
 $white: #FFF;
-$font-size: 16px;
+
+$font-size: 18px;
 $width: 85vw;
 
-$desktop: 800px;
+$tablet: 600px;
+$desktop: 900px;
 
 @mixin button($color, $bgColor) {
     padding: 2vh 4vw;
@@ -19,6 +21,23 @@ $desktop: 800px;
     text-transform: uppercase;
     box-shadow: 0px 0px 5px -1px $neutral-grey;
     cursor: pointer;
+    letter-spacing: 2px;
+    &:hover, &:focus, &:active {
+        background: $color;
+        color: $bgColor;
+    }
+}
+
+@mixin hoverColor($color) {
+    &:hover {
+        color: $color;
+    }
+}
+
+@mixin hoverUnderline {
+    &:hover {
+        text-decoration: underline;
+    }
 }
 
 @mixin media($px) {
@@ -72,7 +91,7 @@ h2 {
     font-size: x-large;
 }
 
-// svg
+// background svg
 .svg-mobile {
     display: block;
     @include media($desktop){
@@ -84,4 +103,9 @@ h2 {
     @include media($desktop){
         display: block;
     }
+}
+
+//cursor pointer
+a {
+    cursor: pointer;
 }
