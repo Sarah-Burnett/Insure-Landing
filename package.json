@@ -4,7 +4,8 @@
   "description": "![Design preview for the Insure landing page coding challenge](./design/desktop-preview.jpg)",
   "main": "index.js",
   "scripts": {
-    "start": "parcel index.html"
+    "start": "parcel index.html",
+    "test": "jest --coverage"
   },
   "repository": {
     "type": "git",
@@ -20,6 +21,7 @@
     "parcel": "^1.12.4"
   },
   "devDependencies": {
+    "jest": "^26.1.0",
     "sass": "^1.26.3"
   }
 }

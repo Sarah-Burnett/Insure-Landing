@@ -118,8 +118,8 @@ parcelRequire = (function (modules, cache, entry, globalName) {
 
   return newRequire;
 })({"js/index.js":[function(require,module,exports) {
-// toggle mob nav bar
-{
+//mob nav bar
+var toggleMobNav = function toggleMobNav() {
   var navLinks = document.querySelector('.nav-links');
 
   var toggleNav = function toggleNav() {
@@ -130,11 +130,12 @@ parcelRequire = (function (modules, cache, entry, globalName) {
     if (navLinks.classList.contains('nav-active')) navLinks.classList.remove('nav-active');
   };
 
-  document.querySelector('#svg-hamburger').addEventListener('click', toggleNav);
+  document.querySelector('#svg-hamburger').onclick = toggleNav;
   window.addEventListener('resize', hideNav);
-} // toggle emergency pop up
+}; // toggle emergency pop up
 
-{
+
+var toggleModal = function toggleModal() {
   var openPopup = function openPopup() {
     var popup = sessionStorage.getItem('popup');
     if (popup === null) document.querySelector('.popupBox').classList.add('popup-active');
@@ -145,14 +146,25 @@ parcelRequire = (function (modules, cache, entry, globalName) {
     sessionStorage.setItem('popup', 'hide');
   };
 
-  document.querySelector('#popupClose').addEventListener('click', closePopup);
+  document.querySelector('#popupClose').onclick = closePopup;
   openPopup();
-} // text for emergency pop up
+}; // text for emergency pop up
 
-{
-  var setAlertText = "<h1><i class='fa fa-exclamation-circle'></i> Covid-19 update</h1><p>Visit our <a href='#'>Coronavirus help and support</a> page for frequently asked questions about COVID-19 - we want to help you. </p><p>If you’re driving less, you may be able to temporarily lower your mileage and could be entitled to a refund. Find out more on our <a href='#'>lockdown car insurance refund</a> page.</p>";
-  document.querySelector('.popupText').innerHTML = setAlertText;
-}
+
+var alertText = "<h1><i class='fa fa-exclamation-circle'></i> Covid-19 update</h1><p>Visit our <a href='#'>Coronavirus help and support</a> page for frequently asked questions about COVID-19 - we want to help you. </p><p>If you’re driving less, you may be able to temporarily lower your mileage and could be entitled to a refund. Find out more on our <a href='#'>lockdown car insurance refund</a> page.</p>";
+
+var setModalText = function setModalText() {
+  return document.querySelector('.popupText').innerHTML = alertText;
+};
+
+toggleMobNav();
+toggleModal();
+setModalText();
+module.exports = {
+  toggleMobNav: toggleMobNav,
+  toggleModal: toggleModal,
+  setModalText: setModalText
+};
 },{}],"node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -181,7 +193,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62294" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57151" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

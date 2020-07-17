@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1595021835236" clover="3.2.0">
+  <project timestamp="1595021835236" name="All files">
+    <metrics statements="21" coveredstatements="21" conditionals="4" coveredconditionals="1" methods="7" coveredmethods="6" elements="32" coveredelements="28" complexity="0" loc="21" ncloc="21" packages="1" files="1" classes="1"/>
+    <file name="index.js" path="C:\Users\becky\Desktop\insure-landing\js\index.js">
+      <metrics statements="21" coveredstatements="21" conditionals="4" coveredconditionals="1" methods="7" coveredmethods="6"/>
+      <line num="2" count="1" type="stmt"/>
+      <line num="3" count="1" type="stmt"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="5" count="1" type="cond" truecount="0" falsecount="2"/>
+      <line num="6" count="1" type="stmt"/>
+      <line num="7" count="1" type="stmt"/>
+      <line num="11" count="1" type="stmt"/>
+      <line num="12" count="1" type="stmt"/>
+      <line num="13" count="1" type="stmt"/>
+      <line num="14" count="1" type="cond" truecount="1" falsecount="1"/>
+      <line num="16" count="1" type="stmt"/>
+      <line num="17" count="1" type="stmt"/>
+      <line num="18" count="1" type="stmt"/>
+      <line num="20" count="1" type="stmt"/>
+      <line num="21" count="1" type="stmt"/>
+      <line num="25" count="1" type="stmt"/>
+      <line num="26" count="1" type="stmt"/>
+      <line num="28" count="1" type="stmt"/>
+      <line num="29" count="1" type="stmt"/>
+      <line num="30" count="1" type="stmt"/>
+      <line num="32" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>
