@@ -5,7 +5,7 @@ document.body.innerHTML =
     '<div id="popupClose" class="popup-active"></div>' +
     '<div class="popupText"></div>';
 
-require('./index');
+require("./index");
 
 const burger = document.querySelector('#svg-hamburger');
 const navLinks =  document.querySelector('.nav-links');
