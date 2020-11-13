@@ -1,4 +1,4 @@
-# Frontend Mentor - Insure Landingn Page
+# Frontend Mentor - Insure Landing Page
 
 ![Design preview for Insure landing page](./design/desktop-preview.jpg)
 
