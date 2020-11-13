@@ -1,11 +1,13 @@
-# Insure insurance
+# Frontend Mentor - Insure Landingn Page
 
-> Frontend mentor coding challenge: landing page for insurance company with extra emergency UI popup
+![Design preview for Insure landing page](./design/desktop-preview.jpg)
 
-Landing page:
-* HTML/SASS/vanilla JS
-* Bundled with parcel
-* Emergency UI pop up alert (currently COVID) visibility handled using session storage
+Requirements: 
+- View the optimal layout for the site depending on their device's screen size
+- See hover states for all interactive elements on the page
+
+Extra:
+- Emergency UI pop up alert currently COVID - visibility handled using session storage
 
 ## Installation
 ```bash
