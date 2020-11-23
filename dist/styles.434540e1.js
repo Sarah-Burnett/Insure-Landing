@@ -189,7 +189,7 @@ var reloadCSS = require('_css_loader');
 
 module.hot.dispose(reloadCSS);
 module.hot.accept(reloadCSS);
-},{"./..\\images\\bg-pattern-mobile-nav.svg":[["bg-pattern-mobile-nav.6952305e.svg","images/bg-pattern-mobile-nav.svg"],"images/bg-pattern-mobile-nav.svg"],"C:\\Users\\becky\\Desktop\\insure-landing\\images\\image-intro-mobile.jpg":[["image-intro-mobile.6d8a140c.jpg","images/image-intro-mobile.jpg"],"images/image-intro-mobile.jpg"],"C:\\Users\\becky\\Desktop\\insure-landing\\images\\image-intro-desktop.jpg":[["image-intro-desktop.2adb86e5.jpg","images/image-intro-desktop.jpg"],"images/image-intro-desktop.jpg"],"_css_loader":"node_modules/parcel/src/builtins/css-loader.js"}],"node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./..\\images\\bg-pattern-mobile-nav.svg":[["bg-pattern-mobile-nav.6952305e.svg","images/bg-pattern-mobile-nav.svg"],"images/bg-pattern-mobile-nav.svg"],"C:\\Users\\sarah\\OneDrive\\Desktop\\insure-landing\\images\\image-intro-mobile.jpg":[["image-intro-mobile.6d8a140c.jpg","images/image-intro-mobile.jpg"],"images/image-intro-mobile.jpg"],"C:\\Users\\sarah\\OneDrive\\Desktop\\insure-landing\\images\\image-intro-desktop.jpg":[["image-intro-desktop.2adb86e5.jpg","images/image-intro-desktop.jpg"],"images/image-intro-desktop.jpg"],"_css_loader":"node_modules/parcel/src/builtins/css-loader.js"}],"node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -217,7 +217,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51225" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51193" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
